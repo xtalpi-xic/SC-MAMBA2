@@ -2,7 +2,7 @@
 
 This repository contains the code for the `SC-MAMBA2` package for modeling single-cell transcriptome data.
 
-In [our study](https://www.biorxiv.org/content/10.1101/2024.09.30.615775v1), we applied the state-space model [MAMBA2](https://arxiv.org/pdf/2405.21060) to single-cell transcriptomics, developing the SC-MAMBA2 model. SC-MAMBA2 leverages the efficiency and scalability of state-space models (SSM), enabling it to handle ultra-long transcriptome sequences with lower computational cost.
+In [our study](https://www.biorxiv.org/content/10.1101/2024.09.30.615775v2), we applied the state-space model [MAMBA2](https://arxiv.org/pdf/2405.21060) to single-cell transcriptomics, developing the SC-MAMBA2 model. SC-MAMBA2 leverages the efficiency and scalability of state-space models (SSM), enabling it to handle ultra-long transcriptome sequences with lower computational cost.
 
 The model was trained on a dataset of 57 million cells, making it the most comprehensive solution to date for processing ultra-long sequences. Extensive benchmarking across various downstream tasks consistently demonstrated SC-MAMBA2's superior performance compared to state-of-the-art models, showcasing exceptional accuracy and computational efficiency.
 
@@ -20,7 +20,11 @@ Important: Make sure that the versions of `mamba-ssm` and `causal-conv1d` are co
 
 ## **Resource Data**
 
-Download the dataset used in the paper from the Data folder.
+Download the dataset used in the paper from the data folder.
+
+## **Pre-trained SC-MAMBA2 Models and Checkpoints**
+
+The pretrained SC-MAMBA2 model(whole-body version) is available at [Zenodo](https://doi.org/10.5281/zenodo.14404063). We are continuously improving and expanding our models, with larger and more advanced versions coming soon.
 
 ## **Finetuning SC-MAMBA2**
 
@@ -41,3 +45,35 @@ SC-MAMBA2 can integrate information from different omics layers, such as transcr
 ### **4. Perturbation & Reverse Perturbation**
 
 SC-MAMBA2 can be finetuned to model cellular responses to perturbations, such as drug treatments or genetic modifications. The reverse perturbation functionality further allows the model to predict the necessary interventions to achieve desired cellular states, providing a powerful tool for therapeutic development and precision medicine.
+
+
+## **Acknowledgments**
+
+We would like to express our sincere gratitude to the [scGPT](https://github.com/bowang-lab/scGPT) project. Many of our fundamental data processing approaches were inspired by and referenced from scGPT's implementation. scGPT has provided valuable insights and tools for single-cell transcriptomics analysis, laying an important foundation for our work.
+
+
+## **Citation**
+
+If you use SC-MAMBA2 in your research, please cite our paper:
+
+    {
+    "title": "SC-MAMBA2: Leveraging State-Space Models for Efficient Single-Cell Ultra-Long Transcriptome Modeling",
+    "authors": [
+        "Yalong Zhao",
+        "Bowen Zhao",
+        "Fan Zhang",
+        "Chenfeng He",
+        "Wendao Wu",
+        "Lipeng Lai"
+    ],
+    "journal": "bioRxiv",
+    "date": "2024-09-30",
+    "doi": "https://doi.org/10.1101/2024.09.30.615775"
+    }
+
+
+
+
+
+
+
